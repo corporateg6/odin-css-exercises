@@ -89,3 +89,70 @@
   font-size: 13px;
   font-weight: normal;
 }
+
+ul, li {
+  list-style-type: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  /* grid-template-rows: 100px 50px 1fr 50px; */
+  gap: 4px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* todo */
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.logo {
+  justify-self: start;
+}
+
+.menu {
+  align-self: center;
+}
+
+.sidebar {
+  display: grid;
+  gap: 50px;
+  grid-row-end: span 2;
+}
+
+.side-content, .photo {
+  display: grid;
+  align-items: center;
+}
+
+.article {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.article .card {
+  height: 200px;
+}
+
+.card p {
+  padding: 5px;
+}
+
+.header, .footer {
+  grid-column: 1/-1;
+}
+
+.nav, .article {
+  grid-column-start: 2;
+}
